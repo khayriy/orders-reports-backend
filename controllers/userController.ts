@@ -24,10 +24,10 @@ export const loginHandler =  async (req : Request,res : Response)=>{
 }
 
 export const createNewUserHandler =  async (req : Request, res : Response)=>{
-     const { permissions } = req.user;
-     const isHaveAuth = permissions.view.includes("dash");
+    //  const { permissions } = req.user;
+    //  const isHaveAuth = permissions.view.includes("dash");
     
-     if (!isHaveAuth) throwAuthError("ليس لديك الصلاحية  لانشاء مستخدم");
+    //  if (!isHaveAuth) throwAuthError("ليس لديك الصلاحية  لانشاء مستخدم");
     const {email   , password , roleName , permission} = req.body
     const user = await UserModel.create({email , password , roleName , permission}) 
     const token = user.createJWT()

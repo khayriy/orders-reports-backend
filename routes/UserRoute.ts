@@ -14,6 +14,6 @@ UserRoute.route("/:id").delete(authMiddelware , deleteUserHandler).patch(authMid
 
 UserRoute.route("/login").post(loginHandler); 
 
-//UserRoute.route("/signup").post(createNewUserHandler);
-UserRoute.route("/signup").post(authMiddelware, createNewUserHandler);
+UserRoute.route("/signup").post(createNewUserHandler);
+// UserRoute.route("/signup").post(authMiddelware, createNewUserHandler);
 export default UserRoute;

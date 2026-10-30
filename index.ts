@@ -36,8 +36,6 @@ app.use('/api/user' , UserRoute)
 app.use('/api/product' , authMiddelware  , ProductRoute)
 app.use('/api/ship' , authMiddelware , ShipRoute)
 app.use('/api/order' , authMiddelware , OrderRoute)
-// app.use('/api/contacts' , authMiddelware , ContactsRoute)
-// app.use('/api/chat' , authMiddelware , ChatRoute)
 
 // our middleware
 app.use(notFoundMiddelware)
